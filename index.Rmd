@@ -22,30 +22,11 @@ My revised and reduced dataset comprises a total of `r summary_info$num_observat
 
 ### The Dataset
 
-Who collected the data?  
-How was the data collected or generated?  
-Why was the data collected?  
-How many observations (rows) are in your data?  
-How many features (columns) are in the data?  
-What, if any, ethical questions or questions of power do you need to consider when working with this data?  
-What are possible limitations or problems with this data?   (at least 200 words)
-
+The Vera Institute of Justice assembled the incarceration trends dataset, incorporating county-level jail data from 1970 to 2018 and county-level prison data from 1983 to 2016. This data compilation was conducted through two Bureau of Justice Statistics data collections and blends sources from the National Correction Reporting Program, Annual Survey of Jails, Census of Jails, as well as population and admissions variables from the Death in Custody Reporting Program. The information was gathered with the intent of visualization using various data tools. In dataset about prison/jail population per 100,000 people (rate) per county/state, there are 54793 observations and 23 variables. In dataset about priso prison/jail population per 100,000 people (rate) per county/state starting at 1990 in Washington, there are 1131 observations and 6 variables. In dataset about prison population per county/state, there are 153811 observations and 36 variables. There is an acknowledgment that human factors may have led to some unavoidable minor inaccuracies in calculation. However, these errors are deemed negligible for a comprehensive trend analysis. The research and study on prisoners should be approached with caution, honoring the principles of justice and respect for individuals. Moreover, as a continuation of the justice concept, the idea of collaborative responsibility should be woven into a revised ethical framework to foster ethical growth. By actively engaging with all relevant stakeholders and maintaining open communication across concerned areas, researchers can ensure they create ethical environments that promote respect and minimize exploitation in every research context.
 
 ### Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The first chart that you will create and include will show the trend over time of your variable/topic. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - This may mean showing the same measure for different locations or different racial groups. Think carefully about a meaningful comparison of locations (e.g., the top 10 counties in a state, top 10 states, etc.)
-- You must have clear x and y axis labels
-- The chart needs a clear title
-- You need a legend for your different line colors and a clear legend title
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
+This line graph illustrates the prison or jail population rate per 100,000 individuals in Washington, segmented by race, including AAPI, Black, Latinx, Native, and White, starting from 1990. It reveals that the prison population rate for the Black community has been on a downward trend from around 2000 to the present, while the Native population experienced an upward trend with a recent sharp decline. In comparison, the Latinx, AAPI, and White groups have relatively lower prison population rates. Currently, the Native race has the highest prison population rate.
 
 ``````{r, echo = FALSE, code = readLines("chart1_example.R"), warning=F, message=F}
 chart1
@@ -53,13 +34,7 @@ chart1
 
 ### Variable Comparison Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The second chart that you will create and include will show how two different (continuous) variables are related to one another. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- You must have clear x and y axis labels
-- The chart needs a clear title
-- If you choose to add a color encoding (not required), you need a legend for your different color and a clear legend title
+The chart analyzes the mean prison rate for both males and females, plotting them on a scatter plot complemented by a linear regression line. This visualization emphasizes a pronounced positive linear relationship between female and male prison rates, demonstrating that an increase in the average prison rate for females coincides with a similar rise in the average prison rate for males.
 
 ``````{r, echo = FALSE, code = readLines("chart2_example.R"), warning=F, message=F}
 chart2
