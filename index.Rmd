@@ -14,19 +14,11 @@ source("map_example.R")
 
 ### Introduction
 
-An introduction of the problem domain and a description of the variable(s) you are choosing to analyze (and why!)
+I investigated the research question concerning the overall Prison Population Rate in Washington (WA) over time, the comparison of Prison Rates between males and females, and the Prison Population across various states in the United States. My selection of these three questions was driven by the desire to understand the larger context, focusing on ethnic disparities in localized areas and overarching trends nationwide. On a more localized scale, I examined the prison population rate among different ethnic groups within 39 counties in Washington state. Conversely, I assessed the total prison population in individual states on a broader scale, evaluating regional variations on a U.S. map.
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
-
-These will likely be calculated using your DPLYR skills, answering questions such as: 
-
-- What is the average value of my variable across all the counties (in the current year)?
-- Where is my variable the highest / lowest?
-- How much has my variable change over the last N years?
-
-Feel free to calculate and report values that you find relevant. Again, remember that the purpose is to think about how these measure of incarceration vary by race.
+My revised and reduced dataset comprises a total of `r summary_info$num_observations` individual observations and `r summary_info$num_column` characteristics or elements under examination. This data encompasses the prison population across `r summary_info$num_states` states within the U.S. The year marked by the peak in prison population numbers is `r summary_info$high_p_year`, and the state registering the most significant number of prison inhabitants is `r summary_info$high_p_state`.
 
 ### The Dataset
 
@@ -48,7 +40,7 @@ The first chart that you will create and include will show the trend over time o
 - Show more than one, but fewer than ~10 trends
   - This may mean showing the same measure for different locations or different racial groups. Think carefully about a meaningful comparison of locations (e.g., the top 10 counties in a state, top 10 states, etc.)
 - You must have clear x and y axis labels
-- The chart needs a clear title 
+- The chart needs a clear title
 - You need a legend for your different line colors and a clear legend title
 
 When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
@@ -66,7 +58,7 @@ Include a chart. Make sure to describe why you included the chart, and what patt
 The second chart that you will create and include will show how two different (continuous) variables are related to one another. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
 
 - You must have clear x and y axis labels
-- The chart needs a clear title 
+- The chart needs a clear title
 - If you choose to add a color encoding (not required), you need a legend for your different color and a clear legend title
 
 ``````{r, echo = FALSE, code = readLines("chart2_example.R"), warning=F, message=F}
@@ -74,13 +66,7 @@ chart2
 ```
 ### Map
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The last chart that you will create and include will show how a variable is distributed geographically. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Your map needs a title
-- Your color scale needs a legend with a clear label
-- Use a map based coordinate system to set the aspect ratio of your map
+This map of the United States illustrates the prison population in each state, with states depicted in darker shades of red having more substantial numbers of inmates. The map provides an overall perspective of the distribution of the prison population across the U.S. From the visual representation, it is clear that Texas leads the nation with the most significant number of incarcerated individuals, bearing the heaviest prison burden, followed by Georgia. Other states display less variation amongst themselves, with the central region tending to have a higher prison population.
 
 ```{r, echo = FALSE, warning=F, message=F}
 us_map_pop_prison

@@ -9,8 +9,6 @@ num_state <- df_prison %>%
   group_by(state) %>% 
   summarize(total_prison_pop = n())
 
-
-
 prison_pop_map <- plot_usmap("states",
                              data = num_state,
                              values = "total_prison_pop", labels = FALSE) +
