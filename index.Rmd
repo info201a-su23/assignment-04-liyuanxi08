@@ -39,6 +39,7 @@ The chart analyzes the mean prison rate for both males and females, plotting the
 ``````{r, echo = FALSE, code = readLines("chart2_example.R"), warning=F, message=F}
 chart2
 ```
+
 ### Map
 
 This map of the United States illustrates the prison population in each state, with states depicted in darker shades of red having more substantial numbers of inmates. The map provides an overall perspective of the distribution of the prison population across the U.S. From the visual representation, it is clear that Texas leads the nation with the most significant number of incarcerated individuals, bearing the heaviest prison burden, followed by Georgia. Other states display less variation amongst themselves, with the central region tending to have a higher prison population.
