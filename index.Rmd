@@ -1,7 +1,16 @@
 ---
-title: "A3: Incarceration"
-output: html_document
+title: 'A3: Incarceration'
+output:
+  html_document: default
+  pdf_document: default
 ---
+
+```{r include=F}
+source("summary.R")
+source("chart1_example.R")
+source("chart2_example.R")
+source("map_example.R")
+```
 
 ### Introduction
 
@@ -46,7 +55,8 @@ When we say "clear" or "human readable" titles and labels, that means that you s
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+``````{r, echo = FALSE, code = readLines("chart1_example.R"), warning=F, message=F}
+chart1
 ```
 
 ### Variable Comparison Chart
@@ -59,6 +69,9 @@ The second chart that you will create and include will show how two different (c
 - The chart needs a clear title 
 - If you choose to add a color encoding (not required), you need a legend for your different color and a clear legend title
 
+``````{r, echo = FALSE, code = readLines("chart2_example.R"), warning=F, message=F}
+chart2
+```
 ### Map
 
 Include a chart. Make sure to describe why you included the chart, and what patterns emerged
@@ -69,3 +82,6 @@ The last chart that you will create and include will show how a variable is dist
 - Your color scale needs a legend with a clear label
 - Use a map based coordinate system to set the aspect ratio of your map
 
+```{r, echo = FALSE, warning=F, message=F}
+us_map_pop_prison
+```
